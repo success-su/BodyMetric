@@ -4,7 +4,6 @@ import { useEffect, useRef, useState } from 'react';
 export function usePersistedState(key, initialValue) {
   const [value, setValue] = useState(initialValue);
   const loaded = useRef(false);
-
   useEffect(() => {
     let cancelled = false;
     AsyncStorage.getItem(key).then((stored) => {
