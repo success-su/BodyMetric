@@ -5,7 +5,6 @@ export function calculateWhr(waist, hip) {
 
 export function whrCategory(whr, gender) {
   if (whr === null) return null;
-
   if (gender === 'male') {
     if (whr <= 0.95) return { label: 'Low Risk', color: '#22C55E' };
     if (whr <= 1.0) return { label: 'Moderate Risk', color: '#F59E0B' };
