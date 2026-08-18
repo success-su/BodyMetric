@@ -3,6 +3,7 @@ const CM_PER_INCH = 2.54;
 
 export function convertWeight(value, fromUnit, toUnit) {
   if (fromUnit === toUnit) return value;
+  
   const kg = fromUnit === 'lb' ? value * KG_PER_LB : value;
   return toUnit === 'lb' ? kg / KG_PER_LB : kg;
 }
